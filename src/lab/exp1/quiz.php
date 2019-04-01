@@ -68,7 +68,7 @@ function getOptions(opt){
   <ol>
   <table>
   <tr><td width=70%>
-    <li>
+    
 	 How does polarized light differ from the ordinary light?
 
       <ol type="A">
@@ -78,7 +78,7 @@ function getOptions(opt){
 .</li>
 	 <li><input type="radio" name="q1" value="D">Polarized light have vibrations at 90<sup>o</sup> to the ordinary light wave vibrations.</li>
       </ol>
-    </li>
+    
 <br>	<?php 
 	if($_POST){
 		echo "</td><td width=30%>";
@@ -92,7 +92,7 @@ function getOptions(opt){
 	?>
   </td></tr>
   <tr><td>
-    <li>
+   
 	 What do you understand by polarized light and the plane of polarization?
       <ol type="A">
 	 <li><input type="radio" name="q2" value="A">Polarized light wave vibrations confined to single plane and plane of polarization is the plane in which the vector along which the light wave vibrates lies.</li>
@@ -100,7 +100,7 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="C">Polarized light wave vibrations confined to more than one plane and plane of polarization is the plane at right angle to the vector along which the light wave vibrates lies.</li>
 	 <li><input type="radio" name="q2" value="D">Polarized light wave vibrations confined to single plane and plane of polarization is the plane at right angle to the vector along which the light wave vibrates lies</li>
       </ol>
-    </li><br>
+    <br>
 	<?php 
 	if($_POST){
 		echo "</td><td>";
@@ -115,7 +115,7 @@ function getOptions(opt){
   </td></tr>
 
   <tr><td>
-     <li>
+    
 	 What are the factors on which the optical activity of a substance depends?
       <ol type="A">
 	 <li><input type="radio" name="q3" value="A">Temperature, wavelength of light used, concentration of the substance.</li>
@@ -123,7 +123,7 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="C">Wavelength of light used and concentration of substance.</li>
 	 <li><input type="radio" name="q3" value="D">Temperature, wavelength of light used, and length of polarimeter tube.</li>
       </ol>
-    </li><br>
+    <br>
 	<?php 
 	if($_POST){
 		echo "</td><td>";
@@ -138,7 +138,7 @@ function getOptions(opt){
   </td></tr>
 
   <tr><td>
-    <li>
+    
 	 How does the optical activity depend on the state of the substance?
       <ol type="A">
 	 <li><input type="radio" name="q4" value="A">If the compound is present in (+) form, it rotates plane polarized light in anticlockwise direction and if it is present in (-) form, it rotates plane polarized light in clockwise direction with equal magnitude.</li>
@@ -146,7 +146,7 @@ function getOptions(opt){
 	 <li><input type="radio" name="q4" value="C">If the compound is present in (+) form it rotates plane polarized light in clockwise direction and if it is present in (-) form, it rotates plane polarized light in anticlockwise direction with same magnitude.</li>
 	 <li><input type="radio" name="q4" value="D">Both rotates the plane polarized light in same direction with equal magnitude.</li>
       </ol>
-    </li><br>
+    <br>
 	<?php 
 	if($_POST){
 		echo "</td><td>";
@@ -161,7 +161,7 @@ function getOptions(opt){
   </td></tr>
 
   <tr><td>
-     <li>
+     
 	 Given that (R)-2-bromobutane has a specific rotation of -23.1<sup>o</sup> ,what is the specific rotation of (S)-2-bromobutane?
       <ol type="A">
 	 <li><input type="radio" name="q5" value="A">+20.1<sup>o</sup>.</li>
@@ -169,7 +169,7 @@ function getOptions(opt){
 	 <li><input type="radio" name="q5" value="C">+23.1<sup>o</sup>.</li>
 	 <li><input type="radio" name="q5" value="D">+29.1<sup>o</sup>.</li>
       </ol>
-    </li>
+   
 	<?php 
 	if($_POST){
 		echo "</td><td>";
@@ -184,7 +184,7 @@ function getOptions(opt){
   </td></tr>
 
   <tr><td>
-     <li>
+     
 	Which isomer is dominant in a mixture of (R)- and (S)-2-bromobutane whose specific rotation was found to be -9.2<sup>o</sup> ?
       <ol type="A">
 	 <li><input type="radio" name="q6" value="A">Both R and S enantiomers are found in equal proportions.</li>
@@ -192,7 +192,7 @@ function getOptions(opt){
 	 <li><input type="radio" name="q6" value="C">The negative sign indicates that the S enantiomer is the dominant one.</li>
 	 <li><input type="radio" name="q6" value="D">None of the above options are correct.</li>
       </ol>
-    </li>
+   
 	<?php 
 	if($_POST){
 		echo "</td><td>";
