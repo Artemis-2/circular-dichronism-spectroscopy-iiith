@@ -77,10 +77,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q1" value="D">combination of all possible secondary structures.</li>
       </ol>
     </li>
-<br>	<?php 
+    <br>	<?php
+$q1=0;
 	if($_POST){
 		echo "</td><td width=30%>";
 		if($_POST['q1'] == "D"){
+			$q1=1;
 			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
 		}
 		else{
@@ -99,10 +101,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="D">Add up.</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q2=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q2'] == "A"){
+			$q2=1;
 			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
 		}
 		else{
@@ -122,10 +126,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="D">Only for a few number of proteins it is possible not for all.</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q3=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q3'] == "C"){
+			$q3=1;
 			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
 		}
 		else{
@@ -137,6 +143,15 @@ function getOptions(opt){
 
   </table>
   </ol>
+<?php
+$total=$q1+$q2+$q3+$q4+$q5+$q6+$q7;
+echo "TOTAL MARKS:".$total;
+if($total>=1)
+        echo "PASS"
+else
+        echo "FAIL"
+?>
+
 	
 	<?php	if(!$_POST){ ?>
 	<input type="submit" id="go" class="boundingBox" value="SUBMIT"><br><br><Br>

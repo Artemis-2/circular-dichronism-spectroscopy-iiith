@@ -79,17 +79,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q1" value="D">Left Circularly</li>
       </ol>
     </li>
-<br>	<?php 
-	if($_POST){
-		echo "</td><td width=30%>";
-		if($_POST['q1'] == "B"){
-			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q1'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
-		}
+    <br>	<?php 
+$q1=0;
+if($_POST){
+	echo "</td><td width=30%>";
+	if($_POST['q1'] == "B"){
+		$q1=1;
+		echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q1'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
+	}
+}
+?>
   </td></tr>
   <tr><td>
     <li>
@@ -101,17 +103,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="D">scattering</li>
       </ol>
     </li><br>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q2'] == "B"){
-			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q2'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
-		}
+<?php 
+$q2=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q2'] == "B"){
+		$q2=1;
+		echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q2'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -124,17 +128,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="D">scattering</li>
       </ol>
     </li><br>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q3'] == "A"){
-			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q3'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
-		}
+<?php 
+$q3=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q3'] == "A"){
+		$q3=1;
+		echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q3'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -147,17 +153,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q4" value="D">imaginary</li>
       </ol>
     </li><br>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q4'] == "A"){
-			echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q4'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
-		}
+<?php 
+$q4=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q4'] == "A"){
+		$q4=1;
+		echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q4'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -170,17 +178,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q5" value="D">can not say</li>
       </ol>
     </li>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q5'] == "A"){
-			echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q5'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
-		}
+<?php 
+$q5=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q5'] == "A"){
+		$q5=1;
+		echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q5'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -193,17 +203,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q6" value="D">can not say</li>
       </ol>
     </li>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q6'] == "B"){
-			echo "<span style='color:green'>(".$_POST['q6'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q6'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
-		}
+<?php 
+$q6=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q6'] == "B"){
+		$q6=1;
+		echo "<span style='color:green'>(".$_POST['q6'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q6'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
+	}
+}
+?>
   </td></tr>
   <tr><td>
      <li>
@@ -215,22 +227,32 @@ function getOptions(opt){
 	 <li><input type="radio" name="q7" value="D">none of these</li>
       </ol>
     </li>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q6'] == "C"){
-			echo "<span style='color:green'>(".$_POST['q7'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q7'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
-		}
+<?php 
+$q7=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q7'] == "C"){
+		$q7=1;
+		echo "<span style='color:green'>(".$_POST['q7'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q7'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
+	}
+}
+?>
   </td></tr>
-   
+
 </table>
   </ol>
-	
+<?php
+$total=$q1+$q2+$q3+$q4+$q5+$q6+$q7;
+echo "TOTAL MARKS:".$total;
+if($total>3)
+	echo "PASS"
+else
+	echo "FAIL"
+?>
+
 	<?php	if(!$_POST){ ?>
 	<input type="submit" id="go" class="boundingBox" value="SUBMIT"><br><br><Br>
 	<?php }?>
@@ -291,19 +313,19 @@ tr .boundingBox {
 	box-shadow: 5px 5px 5px #888;	
 }
 </style>
-<script type="text/javascript">
-function getOptions(opt){
-	var options = "";
-	for(var i = parseInt(opt) ; i <= 100 ; i += 5){
-		if(i == 100){	
-			options =  options + "<option value='"+i+"' selected='true'>"+i+" C</option>\n";
+	<script type="text/javascript">
+	function getOptions(opt){
+		var options = "";
+		for(var i = parseInt(opt) ; i <= 100 ; i += 5){
+			if(i == 100){	
+				options =  options + "<option value='"+i+"' selected='true'>"+i+" C</option>\n";
+			}
+			else{
+				options =  options + "<option value='"+i+"'>"+i+" C</option>\n";
+			}
 		}
-		else{
-			options =  options + "<option value='"+i+"'>"+i+" C</option>\n";
-		}
+		document.getElementById("end").innerHTML = options;
 	}
-	document.getElementById("end").innerHTML = options;
-}
 </script>
 </head>
 <body>
@@ -325,17 +347,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q1" value="D">Polarized light have vibrations at 90<sup>o</sup> to the ordinary light wave vibrations.</li>
       </ol>
     </li>
-<br>	<?php 
+    <br>	<?php 
+	$q1=0;
 	if($_POST){
 		echo "</td><td width=30%>";
 		if($_POST['q1'] == "A"){
+			$q1=1;
 			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
 		}
 		else{
 			echo "<span style='color:red'>(".$_POST['q1'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
 		}
 	}
-	?>
+?>
   </td></tr>
   <tr><td>
     <li>
@@ -347,17 +371,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="D">Polarized light wave vibrations confined to single plane and plane of polarization is the plane at right angle to the vector along which the light wave vibrates lies</li>
       </ol>
     </li><br>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q2'] == "A"){
-			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q2'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
-		}
+<?php 
+	$q2=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q2'] == "A"){
+		$q2=1;
+		echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q2'].") IS NOT CORRECT ! CORRECT answer is (A).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -370,17 +396,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="D">Temperature, wavelength of light used, and length of polarimeter tube.</li>
       </ol>
     </li><br>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q3'] == "B"){
-			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q3'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
-		}
+<?php 
+$q3=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q3'] == "B"){
+		$q3=1;
+		echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q3'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -393,17 +421,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q4" value="D">Both rotates the plane polarized light in same direction with equal magnitude.</li>
       </ol>
     </li><br>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q4'] == "C"){
-			echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q4'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
-		}
+<?php 
+$q4=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q4'] == "C"){
+		$q4=1;
+		echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q4'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -416,17 +446,19 @@ function getOptions(opt){
 	 <li><input type="radio" name="q5" value="D">+29.1<sup>o</sup>.</li>
       </ol>
     </li>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q5'] == "C"){
-			echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q5'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
-		}
+<?php 
+$q5=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q5'] == "C"){
+		$q5=1;
+		echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q5'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
+	}
+}
+?>
   </td></tr>
 
   <tr><td>
@@ -439,22 +471,33 @@ function getOptions(opt){
 	 <li><input type="radio" name="q6" value="D">None of the above options are correct.</li>
       </ol>
     </li>
-	<?php 
-	if($_POST){
-		echo "</td><td>";
-		if($_POST['q6'] == "B"){
-			echo "<span style='color:green'>(".$_POST['q6'].") IS CORRECT</span>";
-		}
-		else{
-			echo "<span style='color:red'>(".$_POST['q6'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
-		}
+<?php 
+$q6=0;
+if($_POST){
+	echo "</td><td>";
+	if($_POST['q6'] == "B"){
+		$q6=1;
+		echo "<span style='color:green'>(".$_POST['q6'].") IS CORRECT</span>";
 	}
-	?>
+	else{
+		echo "<span style='color:red'>(".$_POST['q6'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
+	}
+}
+?>
   </td></tr>
-   
+
 </table>
   </ol>
-	
+<?php
+$total=$q1+$q2+$q3+$q4+$q5+$q6+$q7;
+echo "TOTAL MARKS:".$total;
+if($total>=3)
+        echo "PASS"
+else
+        echo "FAIL"
+?>
+
+
 	<?php	if(!$_POST){ ?>
 	<input type="submit" id="go" class="boundingBox" value="SUBMIT"><br><br><Br>
 	<?php }?>

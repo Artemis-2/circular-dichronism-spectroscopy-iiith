@@ -79,10 +79,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q1" value="D">Polarized light have vibrations at 90<sup>o</sup> to the ordinary light wave vibrations.</li>
       </ol>
     </li>
-<br>	<?php 
+    <br>	<?php 
+$q1=0;
 	if($_POST){
 		echo "</td><td width=30%>";
 		if($_POST['q1'] == "A"){
+			$q1=1;
 			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
 		}
 		else{
@@ -101,10 +103,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="D">Polarized light wave vibrations confined to single plane and plane of polarization is the plane at right angle to the vector along which the light wave vibrates lies</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q2=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q2'] == "A"){
+			$q2=1;
 			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
 		}
 		else{
@@ -124,11 +128,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="D">Temperature, wavelength of light used, and length of polarimeter tube.</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q3=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q3'] == "B"){
-			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
+$q3=1;			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
 		}
 		else{
 			echo "<span style='color:red'>(".$_POST['q3'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
@@ -147,11 +152,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q4" value="D">Both rotates the plane polarized light in same direction with equal magnitude.</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q4=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q4'] == "C"){
-			echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
+	$q4=1;		echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
 		}
 		else{
 			echo "<span style='color:red'>(".$_POST['q4'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
@@ -170,11 +176,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q5" value="D">+29.1<sup>o</sup>.</li>
       </ol>
     </li>
-	<?php 
+<?php 
+$q5=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q5'] == "C"){
-			echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
+$q5=1;			echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
 		}
 		else{
 			echo "<span style='color:red'>(".$_POST['q5'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
@@ -193,14 +200,17 @@ function getOptions(opt){
 	 <li><input type="radio" name="q6" value="D">None of the above options are correct.</li>
       </ol>
     </li>
-	<?php 
+<?php
+$q6=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q6'] == "B"){
+			$q6=1;
 			echo "<span style='color:green'>(".$_POST['q6'].") IS CORRECT</span>";
 		}
 		else{
 			echo "<span style='color:red'>(".$_POST['q6'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
+
 		}
 	}
 	?>
@@ -208,7 +218,17 @@ function getOptions(opt){
    
 </table>
   </ol>
-	
+<?php
+$total=$q1+$q2+$q3+$q4+$q5+$q6;
+echo "TOTAL MARKS:".$total;
+if($total>=3)
+	echo "PASS";
+else
+	echo "FAIL";
+?>
+
+
+
 	<?php	if(!$_POST){ ?>
 	<input type="submit" id="go" class="boundingBox" value="SUBMIT"><br><br><Br>
 	<?php }?>

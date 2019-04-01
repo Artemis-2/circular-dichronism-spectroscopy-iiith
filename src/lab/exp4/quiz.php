@@ -78,11 +78,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q1" value="D">CD ,CD</li>
       </ol>
     </li>
-<br>	<?php 
+    <br>	<?php 
+$q1=0;
 	if($_POST){
 		echo "</td><td width=30%>";
 		if($_POST['q1'] == "B"){
-			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
+$q1=1;			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
 		}
 		else{
 			echo "<span style='color:red'>(".$_POST['q1'].") IS NOT CORRECT ! CORRECT answer is (B).</span>";
@@ -101,11 +102,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="D">Classical, Relativistic</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q2=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q2'] == "C"){
-			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
+$q2=1;			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
 		}
 		else{
 			echo "<span style='color:red'>(".$_POST['q2'].") IS NOT CORRECT ! CORRECT answer is (C).</span>";
@@ -125,10 +127,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="D">UV , ORD</li>
       </ol>
     </li><br>
-	<?php 
+<?php
+$q3=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q3'] == "A"){
+			$q3=1;
 			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
 		}
 		else{
@@ -142,6 +146,15 @@ function getOptions(opt){
    
 </table>
   </ol>
+<?php
+$total=$q1+$q2+$q3+$q4+$q5+$q6+$q7;
+echo "TOTAL MARKS:".$total;
+if($total>=1)
+        echo "PASS"
+else
+        echo "FAIL"
+?>
+
 	
 	<?php	if(!$_POST){ ?>
 	<input type="submit" id="go" class="boundingBox" value="SUBMIT"><br><br><Br>

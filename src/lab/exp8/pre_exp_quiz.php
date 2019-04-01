@@ -78,10 +78,12 @@ function getOptions(opt){
       </ol>
     </li>
 
-<br>	<?php 
+    <br>	<?php 
+$q1=0;
 	if($_POST){
 		echo "</td><td width=30%>";
 		if($_POST['q1'] == "C"){
+			$q1=1;
 			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
 		}
 		else{
@@ -100,10 +102,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="D">intramolecular hydrogen bonding</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q2=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q2'] == "D"){
+			$q2=1;
 			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
 		}
 		else{
@@ -123,10 +127,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="D">both the folded and unfolded states are equally populated.</li>
       </ol>
     </li><br>
-	<?php 
+<?php
+$q3=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q3'] == "D"){
+			$q3=1;
 			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
 		}
 		else{
@@ -146,10 +152,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q4" value="D">non-linear structure of protein</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q4=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q4'] == "B"){
+			$q4=1;
 			echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
 		}
 		else{
@@ -169,10 +177,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q5" value="D">the heat converts the protein into water</li>
       </ol>
     </li>
-	<?php 
+<?php
+$q5=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q5'] == "B"){
+			$q5=1;
 			echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
 		}
 		else{
@@ -191,10 +201,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q6" value="D">Tertiary structure.</li>
       </ol>
     </li>
-	<?php 
+<?php 
+$q6=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q6'] == "C"){
+			$q6=1;
 			echo "<span style='color:green'>(".$_POST['q6'].") IS CORRECT</span>";
 		}
 		else{
@@ -213,10 +225,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q7" value="D">none of the above.</li>
       </ol>
     </li>
-	<?php 
+<?php 
+$q7=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q7'] == "B"){
+			$q7=1;
 			echo "<span style='color:green'>(".$_POST['q7'].") IS CORRECT</span>";
 		}
 		else{
@@ -235,10 +249,13 @@ function getOptions(opt){
 	 <li><input type="radio" name="q8" value="D">5</li>
       </ol>
     </li>
-	<?php 
+<?php 
+$q8=0;
+
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q8'] == "C"){
+			$q8=1;
 			echo "<span style='color:green'>(".$_POST['q8'].") IS CORRECT</span>";
 		}
 		else{
@@ -249,6 +266,15 @@ function getOptions(opt){
   </td></tr>
   </table>
   </ol>
+<?php
+$total=$q1+$q2+$q3+$q4+$q5+$q6+$q7+$q8;
+echo "TOTAL MARKS:".$total;
+if($total>=4)
+        echo "PASS"
+else
+        echo "FAIL"
+?>
+
 	
 	<?php	if(!$_POST){ ?>
 	<input type="submit" id="go" class="boundingBox" value="SUBMIT"><br><br><Br>

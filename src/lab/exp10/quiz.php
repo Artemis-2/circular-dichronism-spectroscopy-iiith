@@ -77,10 +77,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q1" value="D">misfolded proteins</li>
       </ol>
     </li>
-<br>	<?php 
+    <br>	<?php 
+$q1=0;
 	if($_POST){
 		echo "</td><td width=30%>";
 		if($_POST['q1'] == "D"){
+			$q1=1;
 			echo "<span style='color:green'>(".$_POST['q1'].") IS CORRECT</span>";
 		}
 		else{
@@ -99,10 +101,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q2" value="D">None of the above.</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q2=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q2'] == "C"){
+			$q2=1;
 			echo "<span style='color:green'>(".$_POST['q2'].") IS CORRECT</span>";
 		}
 		else{
@@ -122,10 +126,13 @@ function getOptions(opt){
 	 <li><input type="radio" name="q3" value="D">In the folded state the spectra is absent in CD.</li>
       </ol>
     </li><br>
-	<?php 
+<?php
+$q3=0;
+
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q3'] == "B"){
+			$q4=1;
 			echo "<span style='color:green'>(".$_POST['q3'].") IS CORRECT</span>";
 		}
 		else{
@@ -145,10 +152,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q4" value="D">Refraction of light.</li>
       </ol>
     </li><br>
-	<?php 
+<?php 
+$q4=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q4'] == "B"){
+			$q4=1;
 			echo "<span style='color:green'>(".$_POST['q4'].") IS CORRECT</span>";
 		}
 		else{
@@ -168,10 +177,12 @@ function getOptions(opt){
 	 <li><input type="radio" name="q5" value="D">Its size decreases and more light is scattered.</li> 
       </ol>
     </li>
-	<?php 
+<?php 
+$q5=0;
 	if($_POST){
 		echo "</td><td>";
 		if($_POST['q5'] == "A"){
+			$q5=1;
 			echo "<span style='color:green'>(".$_POST['q5'].") IS CORRECT</span>";
 		}
 		else{
@@ -182,6 +193,15 @@ function getOptions(opt){
   </td></tr>
   </table>
   </ol>
+<?php
+$total=$q1+$q2+$q3+$q4+$q5+$q6+$q7;
+echo "TOTAL MARKS:".$total;
+if($total>=2)
+        echo "PASS"
+else
+        echo "FAIL"
+?>
+
 	
 	<?php	if(!$_POST){ ?>
 	<input type="submit" id="go" class="boundingBox" value="SUBMIT"><br><br><Br>
